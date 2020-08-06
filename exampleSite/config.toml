@@ -20,7 +20,8 @@ googleAnalytics = "UA-XXXXXXX-Y"
     textPrimaryColor = "#292929"
 
 
-
+    [params.footer]
+    copyright = ""
 
     [params.profile]
         enable = true
