@@ -10,11 +10,12 @@
                 {{ .dates }}</div>
         </div>
         {{ if .details }}
+        {{  $formattedDetails := .details | markdownify }}
         <div class="item-content">
             <details>
-                <summary>{{ .details | markdownify | truncate 500 }}</summary>
+                <summary>{{ $formattedDetails | truncate 500 }}</summary>
                 <div>
-                    <p>{{ with .details }}{{ . | markdownify }}{{ end }}</p>
+                    <p>{{ $formattedDetails }}</p>
                     <ul class="resume-list">
                         {{ range .items }}
                         <li>{{ with .details }}{{ . | markdownify }}{{ end }}</li>
