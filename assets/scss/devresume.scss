@@ -36,7 +36,6 @@ $theme-colors: (
 /*************************** Import Bootstrap  *****************************/
 @import "bootstrap/scss/bootstrap.scss";
 
-
 /*************************** DevResume Styles ****************************/
 
 /*********** Theme Generic **********/
@@ -204,9 +203,8 @@ a.resume-link {
     }
 }
 
+// details
 
-
-
-
-
-
+details[open] summary {
+    display: none;
+}
