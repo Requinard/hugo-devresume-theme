@@ -12,19 +12,14 @@
         {{ if .details }}
         {{  $formattedDetails := .details | markdownify }}
         <div class="item-content">
-            <details>
-                <summary>{{ $formattedDetails | truncate 500 }}</summary>
-                <div>
-                    <p>{{ $formattedDetails }}</p>
-                    <ul class="resume-list">
-                        {{ range .items }}
-                        <li>{{ with .details }}{{ . | markdownify }}{{ end }}</li>
-                        {{ end }}
-                    </ul>
-                </div>
-            </details>
+            <p>{{ $formattedDetails }}</p>
+            <ul class="resume-list">
+                {{ range .items }}
+                <li>{{ with .details }}{{ . | markdownify }}{{ end }}</li>
+                {{ end }}
+            </ul>
         </div>
-        {{  end }}
+        {{ end }}
     </div><!--//item-->
     <br/>
     {{ end }}
